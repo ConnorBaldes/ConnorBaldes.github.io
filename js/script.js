@@ -1,89 +1,121 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation Toggle
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const primaryNav = document.querySelector('nav ul');
-    
-    if (mobileNavToggle) {
-        mobileNavToggle.addEventListener('click', () => {
-            const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
-            mobileNavToggle.setAttribute('aria-expanded', !isExpanded);
-            primaryNav.classList.toggle('active');
-        });
+// DOM Elements
+const navbar = document.getElementById('navbar');
+const navLinks = document.querySelectorAll('.nav-link');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-links');
+const collapsibleButtons = document.querySelectorAll('.collapsible-button');
+const contactForm = document.getElementById('contactForm');
+const sections = document.querySelectorAll('section');
+
+// Mobile Menu Toggle
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a nav link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.style.padding = '0.5rem 0';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.padding = '1rem 0';
+        navbar.style.boxShadow = 'none';
     }
-    
-    // Navigation Active State
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.7
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const activeId = entry.target.id;
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${activeId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }, observerOptions);
+});
+
+// Active navigation link based on scroll position
+window.addEventListener('scroll', () => {
+    let current = '';
     
     sections.forEach(section => {
-        observer.observe(section);
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
     });
     
-    // Skills Animation (simple fade-in)
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Collapsible content
+collapsibleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        content.classList.toggle('active');
+        
+        if (content.classList.contains('active')) {
+            this.textContent = 'Hide Courses';
+        } else {
+            this.textContent = 'View Notable Courses';
+        }
+    });
+});
+
+// Contact form submission
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nameField = document.getElementById('name');
+        const emailField = document.getElementById('email');
+        const messageField = document.getElementById('message');
+        
+        // Simple validation
+        if (!nameField.value || !emailField.value || !messageField.value) {
+            alert('Please fill out all fields');
+            return;
+        }
+        
+        // Here you would typically send form data to a backend service
+        // For a GitHub Pages site without backend, we'll just show a success message
+        alert('Thank you for your message! In a real application, this would be sent to a backend service.');
+        
+        // Reset form
+        contactForm.reset();
+    });
+}
+
+// Animation on scroll - Simple implementation
+window.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.project-card, .timeline-content, .skill-category, .contact-content > *');
+    
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        
+        // If element is in viewport
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+// Initialize elements with fade-in animation styles
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.project-card, .timeline-content, .skill-category, .contact-content > *');
+    
+    elements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
     
-    const skillsSection = document.querySelector('#skills');
-    const skillsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                skillItems.forEach(item => {
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                });
-                skillsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    if (skillsSection) {
-        skillsObserver.observe(skillsSection);
-    }
-    
-    // Form Submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the data to a server or email service
-            // For this example, we'll just log it to the console
-            console.log('Form submitted:', { name, email, message });
-            
-            // Show success message (in a real application)
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset the form
-            contactForm.reset();
-        });
-    }
+    // Trigger scroll event to check elements in initial viewport
+    window.dispatchEvent(new Event('scroll'));
 });

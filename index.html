@@ -3,90 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connor Baldes - Computer Science Graduate</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- You may need to add your font imports here, like Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Connor Baldes | Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
+    <!-- Navigation -->
+    <nav id="navbar">
         <div class="container">
-            <a href="#" class="logo">Connor Baldes</a>
-            <nav>
-                <button class="mobile-nav-toggle" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                </button>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section - Merged with About -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h3>Hello, I'm</h3>
-                    <h2><span class="highlight">Connor Baldes</span></h2>
-                    <h3>Computer Science Graduate</h3>
-                    <p>I'm a recent Computer Science graduate from Oregon State University with experience in software engineering and a passion for web development and machine learning.</p>
-                    <p>My background includes internship experience at Intel Corporation where I designed automation frameworks that significantly improved benchmarking processes. I also have long-term experience as a Race Director at Pats Acres Racing Complex, which helped me develop strong leadership and problem-solving skills.</p>
-                    <p>My senior capstone project involved implementing a single-point supervision model to analyze time-series photographs of marine ecosystems, achieving 86% accuracy in species identification through collaboration with OSU biologists.</p>
-                    <p>I'm currently seeking opportunities to apply my technical skills in a challenging software development role.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn">View My Work</a>
-                        <a href="#contact" class="btn secondary">Contact Me</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- Replace with your actual image path -->
-                    <img src="images/cb_headshot_small.PNG" alt="Connor Baldes - Computer Science Graduate">
-                </div>
+            <h1 class="logo">CB</h1>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Education Section -->
-    <section id="education">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="overlay"></div>
         <div class="container">
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3>BS Computer Science</h3>
-                        <span class="education-date">March 2024</span>
-                    </div>
-                    <div class="education-institution">
-                        <h4>Oregon State University</h4>
-                    </div>
-                    <div class="education-details">
-                        <div class="courses">
-                            <h5>Notable Courses:</h5>
-                            <ul class="courses-list">
-                                <li>Web Development</li>
-                                <li>Cloud Application Development</li>
-                                <li>Computer Databases</li>
-                                <li>Advanced Calculus</li>
-                                <li>Advanced Statistics</li>
-                                <li>Computer Networks</li>
-                                <li>Operating Systems</li>
-                                <li>Parallel Programming</li>
-                                <li>Machine Learning and Data Mining</li>
-                            </ul>
-                        </div>
-                        <div class="capstone">
-                            <h5>Senior Capstone:</h5>
-                            <p>Implemented a single-point supervision model to analyze 3,888 time-series photographs taken over 36 months, aimed at understanding species abundance in Oregon's marine intertidal ecosystems. Using the novel P2BNet model for object detection with non-bounding box annotations, I achieved 86% accuracy in species identification while collaborating with a team of OSU biologists.</p>
-                        </div>
+            <div class="home-content">
+                <div class="profile-image">
+                    <img src="images/cb_headshot_small.PNG" alt="Connor Baldes">
+                </div>
+                <div class="text-content">
+                    <h1>Connor Baldes</h1>
+                    <h2>Software Engineer</h2>
+                    <p>Recent Computer Science graduate from Oregon State University with experience in software engineering and a passion for web development and machine learning.</p>
+                    <div class="home-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -96,46 +51,43 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-categories">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">C/C++</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML</span>
-                        <span class="skill-item">CSS</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Bash</span>
-                        <span class="skill-item">Kotlin</span>
-                        <span class="skill-item">LaTeX</span>
-                    </div>
+                    <ul class="skill-list">
+                        <li><span>Python</span><div class="skill-bar"><div class="skill-level advanced"></div></div></li>
+                        <li><span>C/C++</span><div class="skill-bar"><div class="skill-level advanced"></div></div></li>
+                        <li><span>Bash</span><div class="skill-bar"><div class="skill-level intermediate-advanced"></div></div></li>
+                        <li><span>HTML, CSS, JavaScript</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>SQL</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>Kotlin</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>LaTeX</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                    </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Frameworks & Libraries</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">NumPy</span>
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">Flask</span>
-                        <span class="skill-item">CUDA</span>
-                        <span class="skill-item">OpenCL</span>
-                        <span class="skill-item">OpenMP</span>
-                        <span class="skill-item">NodeJS</span>
-                    </div>
+                    <ul class="skill-list">
+                        <li><span>NumPy</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>PyTorch</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>Flask</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>CUDA</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>OpenCL</span><div class="skill-bar"><div class="skill-level beginner"></div></div></li>
+                        <li><span>OpenMP</span><div class="skill-bar"><div class="skill-level beginner"></div></div></li>
+                        <li><span>NodeJS</span><div class="skill-bar"><div class="skill-level beginner"></div></div></li>
+                    </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Tools & Platforms</h3>
-                    <div class="skills-list">
-                        <span class="skill-item">Linux</span>
-                        <span class="skill-item">Git/GitHub</span>
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">GCP</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Jira</span>
-                        <span class="skill-item">Postman</span>
-                        <span class="skill-item">MySQL</span>
-                    </div>
+                    <ul class="skill-list">
+                        <li><span>Linux</span><div class="skill-bar"><div class="skill-level advanced"></div></div></li>
+                        <li><span>Git/GitHub</span><div class="skill-bar"><div class="skill-level advanced"></div></div></li>
+                        <li><span>AWS</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>GCP</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>Docker</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>Jira</span><div class="skill-bar"><div class="skill-level intermediate"></div></div></li>
+                        <li><span>MySQL</span><div class="skill-bar"><div class="skill-level beginner"></div></div></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -144,76 +96,154 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2>My Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <div class="image-placeholder">Project Screenshot</div>
-                    </div>
                     <div class="project-content">
-                        <h3>Project Name</h3>
-                        <p>Brief description of the project, including technologies used and challenges overcome.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
+                        <h3>Rummikub</h3>
+                        <p>A complete digital implementation of Rummikub, a popular and highly strategic tile-based board game. I developed a custom-built graph-based validation system using Kruskal's Minimum Spanning Forest algorithm to ensure all player moves adhere to the official rules.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>NumPy</span>
+                            <span>OOP</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn small">Live Demo</a>
-                            <a href="#" class="btn small secondary">Source Code</a>
+                            <a href="https://github.com/ConnorBaldes/rummikub" target="_blank" class="btn btn-small">View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Additional project cards can be added here -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Serial Image Analysis</h3>
+                        <p>Implemented a single-point supervision model to analyze 3,888 time-series photographs of marine ecosystems. Used the novel P2BNet model designed for object detection with non-bounding box annotations, achieving 86% accuracy in species identification.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NovakLab-EECS/OR_Intertidal_ExpPatch_ImageAnalysis" target="_blank" class="btn btn-small">View on GitHub</a>
+                            <a href="https://arxiv.org/pdf/2207.06827" target="_blank" class="btn btn-small">View Paper</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Automation Framework</h3>
+                        <p>At Intel, I designed and implemented an automation framework that reduced benchmarking initiation and execution time by 700% by running procedures concurrently across multiple virtual machines.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Bash</span>
+                            <span>Virtualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Oregon State University</h3>
+                        <p class="timeline-date">Graduated March 2024</p>
+                        <p>BS in Computer Science<br>GPA: 3.43</p>
+                        <p>Artificial Intelligence Concentration</p>
+                        <div class="collapsible">
+                            <button class="collapsible-button">View Notable Courses</button>
+                            <div class="collapsible-content">
+                                <ul>
+                                    <li>Web Development</li>
+                                    <li>Cloud Application Development</li>
+                                    <li>Computer Databases</li>
+                                    <li>Advanced Calculus</li>
+                                    <li>Advanced Statistics</li>
+                                    <li>Computer Networks</li>
+                                    <li>Operating Systems</li>
+                                    <li>Parallel Programming</li>
+                                    <li>Machine Learning and Data Mining</li>
+                                    <li>Introduction to Artificial Intelligence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Intel Corporation</h3>
+                        <p class="timeline-date">September 2021 - March 2022</p>
+                        <p><strong>Software Engineering Intern</strong> - Hillsboro, OR</p>
+                        <ul>
+                            <li>Designed and implemented an automation framework that reduced benchmarking initiation and execution time by 700% by running procedures concurrently across multiple virtual machines.</li>
+                            <li>Streamlined data collection, and compression. Improving several storage process by 10× and ensuring seamless access for subsequent analysis.</li>
+                            <li>Supported the Reinforcement Learning team by testing models, contributing to a 15% increase in model accuracy or performance in specific benchmarks.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Pats Acres Racing Complex</h3>
+                        <p class="timeline-date">June 2013 - Current</p>
+                        <p><strong>Race Director / Track Supervisor</strong> - Aurora, OR</p>
+                        <ul>
+                            <li>Managed rental operations for go-kart track.</li>
+                            <li>Provided group and 1:1 driving instruction.</li>
+                            <li>Supervised team of track officials and enforced safe operating procedures.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>I'm currently available for full-time opportunities. Feel free to reach out!</p>
-            <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <h3>Email</h3>
-                        <a href="mailto:connorbaldes@gmail.com">connorbaldes@gmail.com</a>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Tualatin, Oregon 97062</p>
                     </div>
                     <div class="contact-item">
-                        <h3>Phone</h3>
+                        <i class="fas fa-envelope"></i>
+                        <p>connorbaldes@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
                         <p>(503) 701-3064</p>
                     </div>
-                    <div class="contact-item">
-                        <h3>Location</h3>
-                        <p>Tualatin, Oregon</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com/in/connor-baldes" target="_blank">linkedin.com/in/connor-baldes</a>
-                    </div>
-                    <div class="contact-item">
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/ConnorBaldes" target="_blank">github.com/ConnorBaldes</a>
+                    <div class="social-links">
+                        <a href="https://github.com/ConnorBaldes" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/connor-baldes" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -222,24 +252,9 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Connor Baldes. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/ConnorBaldes" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/connor-baldes" target="_blank">LinkedIn</a>
-            </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile navigation toggle
-        const navToggle = document.querySelector('.mobile-nav-toggle');
-        const nav = document.querySelector('nav ul');
-        
-        navToggle.addEventListener('click', () => {
-            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !expanded);
-            nav.classList.toggle('active');
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
