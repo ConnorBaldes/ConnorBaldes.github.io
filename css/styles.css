@@ -1,14 +1,17 @@
 /* Base Styles & Reset */
 :root {
-    --color-primary: #5e17eb;
-    --color-secondary: #181818;
-    --color-bg: #ffffff;
-    --color-text: #333333;
-    --color-text-light: #777777;
-    --color-border: #eeeeee;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --max-width: 1200px;
-  }
+  --color-primary: #D73F09; /* OSU Orange */
+  --color-secondary: #4A3C31; /* Deep Brown - complements the brick building */
+  --color-accent: #BF8E30; /* Golden Yellow - matches the autumn trees */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7f4f1; /* Light warm beige for alternate backgrounds */
+  --color-text: #333333;
+  --color-text-light: #65615C; /* Warm gray */
+  --color-border: #E6DFD9; /* Light beige for borders */
+  --color-white: #ffffff;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --max-width: 1200px;
+}
   
   * {
     margin: 0;
@@ -173,9 +176,38 @@
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background-color: #f9f9f9;
+    background-image: url('images/osu-campus.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
   }
-  
+
+    /* Add a dark overlay to ensure text readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjustable darkness */
+    z-index: 1;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+    color: var(--color-white); /* White text for contrast */
+  }
+
+  .hero h3 {
+    color: var(--color-white); /* Override the default text-light color */
+  }
+
+  .hero .highlight {
+    color: var(--color-accent); /* Make your name stand out in gold */
+  }
+
   .hero h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
