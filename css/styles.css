@@ -189,7 +189,73 @@
     display: none;
   }
   
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background-image: url('images/mu_quad.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 
+    /* Add a dark overlay to ensure text readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjustable darkness */
+    z-index: 1;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+    color: var(--color-white); /* White text for contrast */
+  }
+
+  .hero h3 {
+    color: var(--color-white); /* Override the default text-light color */
+  }
+
+  .hero .highlight {
+    color: var(--color-accent); /* Make your name stand out in gold */
+  }
+
+  .hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero h2:after {
+    display: none;
+  }
+  
+  .hero h3 {
+    font-size: 1.75rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .hero .highlight {
+    color: var(--color-primary);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
   
   /* About Section */
   .about-content {
