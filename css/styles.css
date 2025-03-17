@@ -89,7 +89,7 @@
   }
   
   .btn:hover {
-    background-color: #4a12c0;
+    background-color: #AB3007; /* Darker OSU orange instead of purple */
     transform: translateY(-2px);
     color: white;
   }
@@ -101,7 +101,7 @@
   }
   
   .btn.secondary:hover {
-    background-color: #f1eafd;
+    background-color: #FFF1E9; /* Light orange instead of light purple */
     color: var(--color-primary);
   }
   
@@ -189,42 +189,43 @@
     display: none;
   }
   
-/* Hero Section */
+/* Hero Section - Modified to support side-by-side layout */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding-top: 80px;
-  background-image: url('images/mu_quad.jpg');
-  background-size: cover;
-  background-position: center;
   position: relative;
+  background-color: var(--color-bg);
 }
 
-/* Add a dark overlay to ensure text readability */
+/* Remove the background image and overlay from hero */
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* Adjustable darkness */
-  z-index: 1;
+  display: none;
 }
 
-.hero .container {
-  position: relative;
-  z-index: 2; /* Place content above the overlay */
-  color: var(--color-white); /* White text for contrast */
+/* Create the two-column layout for hero content */
+.hero-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
 }
 
-.hero h3 {
-  color: var(--color-white); /* Override the default text-light color */
+.hero-text {
+  color: var(--color-text);
 }
 
-.hero .highlight {
-  color: var(--color-accent); /* Make your name stand out in gold */
+.hero-text h2, .hero-text h3 {
+  color: var(--color-text);
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero h2 {
@@ -460,6 +461,16 @@
     
     .hero h2 {
       font-size: 2.75rem;
+    }
+    
+    .hero-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+      margin-top: 2rem;
+      max-width: 400px;
+      justify-self: center;
     }
     
     .about-content {

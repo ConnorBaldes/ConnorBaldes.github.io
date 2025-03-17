@@ -3,230 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connor Baldes</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+    <title>Connor Baldes - Computer Science Graduate</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- You may need to add your font imports here, like Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
-            <h1 class="logo">Connor Baldes</h1>
+            <a href="#" class="logo">Connor Baldes</a>
             <nav>
+                <button class="mobile-nav-toggle" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                </button>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-            </button>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero" style="background-image: url('images/mu_quad.jpg'); background-size: cover; background-position: center;">
-            <div class="container">
-                <h2>Hello, I'm <span class="highlight">Connor Baldes</span></h2>
-                <h3>Computer Science Graduate </h3>
-                <div class="about-text">
+    <!-- Hero Section - Merged with About -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h3>Hello, I'm</h3>
+                    <h2><span class="highlight">Connor Baldes</span></h2>
+                    <h3>Computer Science Graduate</h3>
                     <p>I'm a recent Computer Science graduate from Oregon State University with experience in software engineering and a passion for web development and machine learning.</p>
                     <p>My background includes internship experience at Intel Corporation where I designed automation frameworks that significantly improved benchmarking processes. I also have long-term experience as a Race Director at Pats Acres Racing Complex, which helped me develop strong leadership and problem-solving skills.</p>
                     <p>My senior capstone project involved implementing a single-point supervision model to analyze time-series photographs of marine ecosystems, achieving 86% accuracy in species identification through collaboration with OSU biologists.</p>
                     <p>I'm currently seeking opportunities to apply my technical skills in a challenging software development role.</p>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
-                </div>
-                <div class="about-image">
-                    <img src="images/cb_headshot_small.PNG" alt="Connor Baldes" class="profile-image">
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a recent Computer Science graduate from Oregon State University with experience in software engineering and a passion for web development and machine learning.</p>
-                        <p>My background includes internship experience at Intel Corporation where I designed automation frameworks that significantly improved benchmarking processes. I also have long-term experience as a Race Director at Pats Acres Racing Complex, which helped me develop strong leadership and problem-solving skills.</p>
-                        <p>My senior capstone project involved implementing a single-point supervision model to analyze time-series photographs of marine ecosystems, achieving 86% accuracy in species identification through collaboration with OSU biologists.</p>
-                        <p>I'm currently seeking opportunities to apply my technical skills in a challenging software development role.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/connor-profile.jpg" alt="Connor Baldes" class="profile-image">
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
                     </div>
                 </div>
+                <div class="hero-image">
+                    <!-- Replace with your actual image path -->
+                    <img src="images/your-profile-photo.jpg" alt="Connor Baldes - Computer Science Graduate">
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="education" class="education">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="education-container">
-                    <div class="education-card">
-                        <div class="education-header">
-                            <h3>BS Computer Science</h3>
-                            <span class="education-date">March 2024</span>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>BS Computer Science</h3>
+                        <span class="education-date">March 2024</span>
+                    </div>
+                    <div class="education-institution">
+                        <h4>Oregon State University</h4>
+                    </div>
+                    <div class="education-details">
+                        <div class="courses">
+                            <h5>Notable Courses:</h5>
+                            <ul class="courses-list">
+                                <li>Web Development</li>
+                                <li>Cloud Application Development</li>
+                                <li>Computer Databases</li>
+                                <li>Advanced Calculus</li>
+                                <li>Advanced Statistics</li>
+                                <li>Computer Networks</li>
+                                <li>Operating Systems</li>
+                                <li>Parallel Programming</li>
+                                <li>Machine Learning and Data Mining</li>
+                            </ul>
                         </div>
-                        <div class="education-institution">
-                            <h4>Oregon State University</h4>
-                        </div>
-                        <div class="education-details">
-                            <div class="courses">
-                                <h5>Notable Courses:</h5>
-                                <ul class="courses-list">
-                                    <li>Web Development</li>
-                                    <li>Cloud Application Development</li>
-                                    <li>Computer Databases</li>
-                                    <li>Advanced Calculus</li>
-                                    <li>Advanced Statistics</li>
-                                    <li>Computer Networks</li>
-                                    <li>Operating Systems</li>
-                                    <li>Parallel Programming</li>
-                                    <li>Machine Learning and Data Mining</li>
-                                </ul>
-                            </div>
-                            <div class="capstone">
-                                <h5>Senior Capstone:</h5>
-                                <p>Implemented a single-point supervision model to analyze 3,888 time-series photographs taken over 36 months, aimed at understanding species abundance in Oregon's marine intertidal ecosystems. Using the novel P2BNet model for object detection with non-bounding box annotations, I achieved 86% accuracy in species identification while collaborating with a team of OSU biologists.</p>
-                            </div>
+                        <div class="capstone">
+                            <h5>Senior Capstone:</h5>
+                            <p>Implemented a single-point supervision model to analyze 3,888 time-series photographs taken over 36 months, aimed at understanding species abundance in Oregon's marine intertidal ecosystems. Using the novel P2BNet model for object detection with non-bounding box annotations, I achieved 86% accuracy in species identification while collaborating with a team of OSU biologists.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>My Skills</h2>
-                <div class="skills-categories">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <ul class="skills-list">
-                            <li class="skill-item" data-skill="Python">Python</li>
-                            <li class="skill-item" data-skill="C/C++">C/C++</li>
-                            <li class="skill-item" data-skill="JavaScript">JavaScript</li>
-                            <li class="skill-item" data-skill="HTML">HTML</li>
-                            <li class="skill-item" data-skill="CSS">CSS</li>
-                            <li class="skill-item" data-skill="SQL">SQL</li>
-                            <li class="skill-item" data-skill="Bash">Bash</li>
-                            <li class="skill-item" data-skill="Kotlin">Kotlin</li>
-                            <li class="skill-item" data-skill="LaTeX">LaTeX</li>
-                        </ul>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C/C++</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">Kotlin</span>
+                        <span class="skill-item">LaTeX</span>
                     </div>
-                    <div class="skill-category">
-                        <h3>Frameworks & Libraries</h3>
-                        <ul class="skills-list">
-                            <li class="skill-item" data-skill="NumPy">NumPy</li>
-                            <li class="skill-item" data-skill="PyTorch">PyTorch</li>
-                            <li class="skill-item" data-skill="Flask">Flask</li>
-                            <li class="skill-item" data-skill="CUDA">CUDA</li>
-                            <li class="skill-item" data-skill="OpenCL">OpenCL</li>
-                            <li class="skill-item" data-skill="OpenMP">OpenMP</li>
-                            <li class="skill-item" data-skill="NodeJS">NodeJS</li>
-                        </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">NumPy</span>
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">CUDA</span>
+                        <span class="skill-item">OpenCL</span>
+                        <span class="skill-item">OpenMP</span>
+                        <span class="skill-item">NodeJS</span>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tools & Platforms</h3>
-                        <ul class="skills-list">
-                            <li class="skill-item" data-skill="Linux">Linux</li>
-                            <li class="skill-item" data-skill="Git/GitHub">Git/GitHub</li>
-                            <li class="skill-item" data-skill="AWS">AWS</li>
-                            <li class="skill-item" data-skill="GCP">GCP</li>
-                            <li class="skill-item" data-skill="Docker">Docker</li>
-                            <li class="skill-item" data-skill="Jira">Jira</li>
-                            <li class="skill-item" data-skill="Postman">Postman</li>
-                            <li class="skill-item" data-skill="MySQL">MySQL</li>
-                        </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">Git/GitHub</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">GCP</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Jira</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">MySQL</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder">Project Screenshot</div>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">Project Screenshot</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Name</h3>
+                        <p>Brief description of the project, including technologies used and challenges overcome.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
                         </div>
-                        <div class="project-content">
-                            <h3>Project Name</h3>
-                            <p>Brief description of the project, including technologies used and challenges overcome.</p>
-                            <div class="project-tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn small">Live Demo</a>
-                                <a href="#" class="btn small secondary">Source Code</a>
-                            </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">Live Demo</a>
+                            <a href="#" class="btn small secondary">Source Code</a>
                         </div>
-                    </article>
-                    
-                    <!-- Additional project cards would go here -->
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>I'm currently available for full-time opportunities. Feel free to reach out!</p>
                 
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <h3>Email</h3>
-                            <p><a href="mailto:connorbaldes@gmail.com">connorbaldes@gmail.com</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Phone</h3>
-                            <p><a href="tel:5037013064">(503) 701-3064</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Location</h3>
-                            <p>Tualatin, Oregon</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://linkedin.com/in/connor-baldes" target="_blank">linkedin.com/in/connor-baldes</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/ConnorBaldes" target="_blank">github.com/ConnorBaldes</a></p>
-                        </div>
-                    </div>
-                    
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
-                </div>
+                <!-- Additional project cards can be added here -->
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>I'm currently available for full-time opportunities. Feel free to reach out!</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:connorbaldes@gmail.com">connorbaldes@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>(503) 701-3064</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>Tualatin, Oregon</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/connor-baldes" target="_blank">linkedin.com/in/connor-baldes</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/ConnorBaldes" target="_blank">github.com/ConnorBaldes</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Connor Baldes. All Rights Reserved.</p>
@@ -236,5 +228,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const nav = document.querySelector('nav ul');
+        
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
