@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Web Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
+                <h3>Web Developer</h3>
+                <p>I build responsive and accessible web applications</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Describe your background, passion for web development, and career goals here. Be authentic and concise.</p>
+                        <p>Mention your education, work experience, and what drives you as a developer.</p>
+                    </div>
+                    <div class="about-image">
+                        <!-- Consider adding a professional photo here -->
+                        <div class="image-placeholder">Your Photo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item" data-skill="HTML">HTML</li>
+                            <li class="skill-item" data-skill="CSS">CSS</li>
+                            <li class="skill-item" data-skill="JavaScript">JavaScript</li>
+                            <!-- Add more skills as needed -->
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul class="skills-list">
+                            <!-- Add your backend skills -->
+                            <li class="skill-item" data-skill="Node.js">Node.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item" data-skill="Git">Git</li>
+                            <!-- Add more tools you're familiar with -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder">Project Screenshot</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Name</h3>
+                            <p>Brief description of the project, including technologies used and challenges overcome.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn small">Live Demo</a>
+                                <a href="#" class="btn small secondary">Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Additional project cards would go here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm currently available for freelance work or full-time opportunities. Feel free to reach out!</p>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/ConnorBaldes" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/connor-baldes" target="_blank">LinkedIn</a>
+                <!-- Add more social links as needed -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
