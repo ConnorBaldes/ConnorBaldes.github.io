@@ -184,6 +184,7 @@
   nav a:hover:after, nav a.active:after {
     width: 100%;
   }
+   
   
   .mobile-nav-toggle {
     display: none;
