@@ -189,69 +189,90 @@
     display: none;
   }
   
-  /* Hero Section */
+  /* Merged Hero Section */
   .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding: 120px 0 80px;
+    position: relative;
     background-image: url('images/mu_quad.jpg');
     background-size: cover;
     background-position: center;
-    position: relative;
   }
 
-    /* Add a dark overlay to ensure text readability */
-  .hero::before {
-    content: '';
+  .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Adjustable darkness */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better text readability */
     z-index: 1;
   }
 
-  .hero .container {
+  .merged-hero-container {
     position: relative;
-    z-index: 2; /* Place content above the overlay */
-    color: var(--color-white); /* White text for contrast */
+    z-index: 2;
   }
 
-  .hero h3 {
-    color: var(--color-white); /* Override the default text-light color */
+  .hero-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    align-items: center;
   }
 
-  .hero .highlight {
-    color: var(--color-accent); /* Make your name stand out in gold */
+  .hero-text {
+    color: var(--color-white);
   }
 
-  .hero h2 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+  .hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
   }
-  
-  .hero h2:after {
+
+  .hero-text h2:after {
     display: none;
   }
-  
-  .hero h3 {
+
+  .hero-text h3 {
     font-size: 1.75rem;
-    color: var(--color-text-light);
+    color: var(--color-white);
     margin-bottom: 1.5rem;
+    opacity: 0.9;
   }
-  
-  .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
+
+  .hero-text .highlight {
+    color: var(--color-accent);
   }
-  
-  .hero .highlight {
-    color: var(--color-primary);
+
+  .hero-text .about-text {
+    margin: 1.5rem 0 2rem;
   }
-  
+
+  .hero-text .about-text p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--color-white);
+  }
+
   .cta-buttons {
     display: flex;
     gap: 1rem;
