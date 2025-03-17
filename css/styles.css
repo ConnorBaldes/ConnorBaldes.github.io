@@ -185,84 +185,94 @@
     width: 100%;
   }
    
-
+  
   .mobile-nav-toggle {
     display: none;
   }
   
-/* Hero Section - with fixed background display issues */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
-  position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/mu_quad.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+  /* Hero Section - Modified to support side-by-side layout with background image */
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background-image: url('images/mu_quad.jpg'); /* Make sure this exact path is correct */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 
-/* Remove the separate overlay since we included it in the gradient */
-.hero::before {
-  display: none;
-}
+  /* Add a dark overlay to ensure text readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better readability */
+    z-index: 1;
+  }
 
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
+  .hero .container {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+  }
 
-/* Two-column layout */
-.hero-content {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 2rem;
-  align-items: center;
-  width: 100%;
-}
+  /* Create the two-column layout for hero content */
+  .hero-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+  }
 
-.hero-text h2, .hero-text h3, .hero-text p {
-  color: var(--color-white);
-}
+  .hero-text {
+    color: var(--color-white);
+  }
 
-.hero-image {
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
+  .hero-text h2, .hero-text h3, .hero-text p {
+    color: var(--color-white);
+  }
 
-.hero h2 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
+  .hero-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
 
-.hero h2:after {
-  display: none;
-}
+  .hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
 
-.hero h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  color: var(--color-white);
-}
+  .hero h2:after {
+    display: none;
+  }
 
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-}
+  .hero h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+  }
 
-.hero .highlight {
-  color: var(--color-accent);
-}
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
 
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-}
+  .hero .highlight {
+    color: var(--color-accent); /* Using the gold accent color for better contrast */
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
   
   /* About Section */
   .about-content {
