@@ -12,6 +12,25 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --max-width: 1200px;
 }
+
+  /* All CSS remains the same until these specific button hover states that need fixing */
+
+  .btn:hover {
+    background-color: #AB3007; /* Darker OSU orange instead of purple */
+    transform: translateY(-2px);
+    color: white;
+  }
+
+  .btn.secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  .btn.secondary:hover {
+    background-color: #FFF1E9; /* Light orange instead of light purple */
+    color: var(--color-primary);
+  }
   
   * {
     margin: 0;
