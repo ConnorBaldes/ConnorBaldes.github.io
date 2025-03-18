@@ -683,7 +683,9 @@ footer {
 /* Logo styling */
 .logo {
   display: flex;
-  align-items: left;
+  align-items: center;
+  margin-right: auto; /* This pushes everything else to the right */
+  justify-content: flex-start; /* Explicitly sets left alignment */
 }
 
 .logo img {
