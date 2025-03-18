@@ -106,14 +106,50 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Initialize elements with fade-in animation styles
+// Initialize elements with fade-in animation styles and set up contact icons
 document.addEventListener('DOMContentLoaded', function() {
+    // Set up animations
     const elements = document.querySelectorAll('.project-card, .timeline-content, .skill-category, .contact-content > *');
     
     elements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    // Make contact icons clickable
+    const contactItems = document.querySelectorAll('.contact-item');
+    
+    contactItems.forEach(item => {
+        const icon = item.querySelector('i');
+        const paragraph = item.querySelector('p');
+        
+        if (icon && paragraph) {
+            const linkElement = paragraph.querySelector('a');
+            if (linkElement) {
+                const linkUrl = linkElement.getAttribute('href');
+                
+                // Create a new anchor element
+                const anchor = document.createElement('a');
+                anchor.setAttribute('href', linkUrl);
+                
+                // If it's not an email link, open in new tab
+                if (!linkUrl.startsWith('mailto:')) {
+                    anchor.setAttribute('target', '_blank');
+                    anchor.setAttribute('rel', 'noopener noreferrer'); // Security best practice
+                }
+                
+                // Clone the icon and append it to the anchor
+                const clonedIcon = icon.cloneNode(true);
+                anchor.appendChild(clonedIcon);
+                
+                // Replace the original icon with the linked icon
+                icon.parentNode.replaceChild(anchor, icon);
+                
+                // Remove the paragraph with the text link
+                item.removeChild(paragraph);
+            }
+        }
     });
     
     // Trigger scroll event to check elements in initial viewport
