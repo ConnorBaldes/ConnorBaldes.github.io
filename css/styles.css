@@ -203,7 +203,7 @@ section {
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 100%; /* Ensure it uses full width */
   max-width: var(--container-width);
@@ -218,6 +218,7 @@ section {
   border: 5px solid var(--primary-color);
   flex: 0 0 auto; /* Prevent flex shrinking/growing */
   margin-right: 2rem; /* Add some spacing */
+  align-self: center; /* Explicitly center the image vertically */
 }
 
 .profile-image img {
@@ -229,6 +230,7 @@ section {
 .text-content {
   flex: 1; /* Allow text to take up remaining space */
   max-width: calc(100% - 450px); /* Account for image width + margin */
+  align-self: center;
 }
 
 .text-content h1 {
@@ -617,9 +619,6 @@ footer {
   }
 
   .profile-image {
-    width: 300px;
-    height: 300px;
-    margin-right: 0;
     margin-bottom: 2rem;
   }
 }
