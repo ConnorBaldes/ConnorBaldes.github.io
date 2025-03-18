@@ -227,6 +227,7 @@ section {
   width: 100%; /* Ensure it uses full width */
   max-width: var(--container-width);
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .profile-image {
@@ -661,16 +662,16 @@ footer {
 
 
 @media (max-width: 1200px) {
-  .home-content {
-      padding: 0 2rem;
-  }
-
   .text-content h1 {
     font-size: 2.5rem;
   }
   
   .text-content h2 {
     font-size: 1.6rem;
+  }
+
+  .text-content p {
+    line-height: 1.4;
   }
 
 }
