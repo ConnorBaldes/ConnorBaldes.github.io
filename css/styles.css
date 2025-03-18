@@ -335,6 +335,18 @@ section {
 }
 
 /* Projects Section */
+#projects .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: calc(var(--container-width) - 6rem);
+    margin: 0 auto;
+}
+
+/* Project cards container padding */
+.projects-container {
+  padding: 1rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -394,10 +406,22 @@ section {
   background-color: var(--light-gray);
 }
 
+#education .container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: calc(var(--container-width) - 6rem);
+  margin: 0 auto;
+}
+
 .timeline {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Education and experience timeline container padding */
+.timeline-container {
+  padding: 1rem 2rem;
 }
 
 .timeline::after {
@@ -674,6 +698,13 @@ footer {
   .profile-image {
     margin-bottom: 2rem;
   }
+
+  #projects .container,
+  #education .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: calc(var(--container-width) - 4rem);
+  }
 }
 
 @media (max-width: 768px) {
@@ -755,7 +786,18 @@ footer {
   .contact-item {
     padding: 1.5rem;
     min-width: 150px;
-}
+  }
+
+  #projects .container,
+  #education .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      max-width: calc(var(--container-width) - 3rem);
+  }
+  
+  .timeline-container {
+      padding: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -790,5 +832,12 @@ footer {
   .contact-item {
     width: 80%;
     max-width: 300px;
+  }
+
+  #projects .container,
+  #education .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: calc(var(--container-width) - 2rem);
   }
 }
