@@ -664,10 +664,6 @@ footer {
   .home-content {
       padding: 0 2rem;
   }
-
-  #skills .container {
-    max-width: 100%; /* Full width on smaller screens */
-  }
 }
 
 /* Media Queries */
@@ -716,7 +712,6 @@ footer {
   #skills .container {
       padding-left: 3rem;
       padding-right: 3rem;
-      max-width: calc(var(--container-width) - 4rem);
   }
 
   .skills-container {
@@ -810,7 +805,6 @@ footer {
   #skills .container {
       padding-left: 2rem;
       padding-right: 2rem;
-      max-width: calc(var(--container-width) - 3rem);
   }
   
   .timeline-container {
@@ -857,7 +851,6 @@ footer {
   #skills .container {
       padding-left: 1rem;
       padding-right: 1rem;
-      max-width: calc(var(--container-width) - 2rem);
   }
 
   .skills-container {
