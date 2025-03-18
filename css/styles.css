@@ -211,8 +211,8 @@ section {
 }
 
 .profile-image {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid var(--primary-color);
