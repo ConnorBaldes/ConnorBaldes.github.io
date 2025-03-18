@@ -38,9 +38,16 @@ ul {
 
 .container {
   width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: 100%; /* Allow full width */;
+  padding: 0; /* Remove default padding */
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0; /* Remove horizontal padding */
+  max-width: 100%; /* Ensure full width */
 }
 
 .section-title {
@@ -121,15 +128,10 @@ section {
   padding: 1rem 2rem;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
 .nav-links {
   display: flex;
   align-items: center;
+  padding-right: 2rem; /* Add padding directly to the nav links */
 }
 
 .nav-links li {
@@ -159,9 +161,11 @@ section {
   width: 100%;
 }
 
+/* Hamburger menu styling */
 .hamburger {
   display: none;
   cursor: pointer;
+  padding-right: 2rem; /* Add padding to the hamburger menu */
 }
 
 .bar {
@@ -684,8 +688,8 @@ footer {
 .logo {
   display: flex;
   align-items: center;
-  margin-right: auto; /* This pushes everything else to the right */
-  justify-content: flex-start; /* Explicitly sets left alignment */
+  padding-left: 2rem; /* Add padding directly to the logo */
+
 }
 
 .logo img {
