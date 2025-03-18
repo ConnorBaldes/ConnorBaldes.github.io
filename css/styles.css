@@ -236,7 +236,7 @@ section {
   overflow: hidden;
   border: 5px solid var(--primary-color);
   flex: 0 0 auto; /* Prevent flex shrinking/growing */
-  margin-right: 2rem; /* Add some spacing */
+  margin-right: 4rem; /* Add some spacing */
   align-self: center; /* Explicitly center the image vertically */
 }
 
@@ -264,7 +264,7 @@ section {
 }
 
 .text-content p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   text-align: left;
   line-height: 1.6;
@@ -664,6 +664,15 @@ footer {
   .home-content {
       padding: 0 2rem;
   }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .text-content h2 {
+    font-size: 1.6rem;
+  }
+
 }
 
 /* Media Queries */
@@ -683,6 +692,11 @@ footer {
   
   .text-content h1 {
       font-size: 2.5rem;
+      text-align: center;
+  }
+
+  .text-content h2 {
+    text-align: center;
   }
 
   .text-content p {
@@ -705,6 +719,7 @@ footer {
 
   .profile-image {
     margin-bottom: 2rem;
+    margin-right: 0rem;
   }
 
   #projects .container,
