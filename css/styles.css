@@ -346,7 +346,7 @@ section {
 #projects .container {
     padding-left: 3rem;
     padding-right: 3rem;
-    max-width: calc(var(--container-width) - 6rem);
+    max-width: 100%;
     margin: 0 auto;
 }
 
