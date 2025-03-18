@@ -187,6 +187,7 @@ section {
   color: white;
   display: flex;
   align-items: center;
+  padding: 100px 0;
 }
 
 #home .overlay {
@@ -202,10 +203,9 @@ section {
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 3rem;
-  text-align: center;
 }
 
 .profile-image {
@@ -222,6 +222,10 @@ section {
   object-fit: cover;
 }
 
+.text-content {
+  max-width: 800px;
+}
+
 .text-content h1 {
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
@@ -234,9 +238,10 @@ section {
 }
 
 .text-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.6;
 }
 
 .home-buttons {
@@ -570,11 +575,16 @@ footer {
   
   .home-content {
       flex-direction: column;
+      align-items: center;
       text-align: center;
   }
   
   .text-content h1 {
       font-size: 2.5rem;
+  }
+
+  .text-content p {
+    text-align: center;
   }
   
   .timeline::after {
@@ -686,7 +696,7 @@ footer {
   .text-content h2 {
       font-size: 1.2rem;
   }
-  
+
   .profile-image {
     width: 250px;
     height: 250px;
