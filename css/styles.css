@@ -683,11 +683,11 @@ footer {
 /* Logo styling */
 .logo {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 
 .logo img {
-  height: 164px; /* Adjust this value based on your logo's dimensions */
+  height: 75px; /* Adjust this value based on your logo's dimensions */
   width: auto;
   transition: all var(--transition-speed);
 }
