@@ -284,7 +284,7 @@ section {
 #skills .container {
   padding-left: 4rem;
   padding-right: 4rem;
-  max-width: calc(var(--container-width) - 6rem);
+  max-width: 100%;
   margin: 0 auto;
 }
 
