@@ -276,11 +276,11 @@ section {
   justify-content: center;
 }
 
-/* Skills Section 
+/* Skills Section */
 #skills {
   background-color: var(--light-gray);
 }
-*/
+
 #skills .container {
   padding-left: 3rem;
   padding-right: 3rem;
