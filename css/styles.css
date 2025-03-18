@@ -687,7 +687,7 @@ footer {
 }
 
 .logo img {
-  height: 40px; /* Adjust this value based on your logo's dimensions */
+  height: 164px; /* Adjust this value based on your logo's dimensions */
   width: auto;
   transition: all var(--transition-speed);
 }
