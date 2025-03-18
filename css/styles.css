@@ -282,16 +282,16 @@ section {
 }
 
 #skills .container {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   max-width: calc(var(--container-width) - 6rem);
   margin: 0 auto;
 }
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 6rem;
   padding: 1rem; /* Add padding without removing grid properties */
 }
 
@@ -664,6 +664,10 @@ footer {
   .home-content {
       padding: 0 2rem;
   }
+
+  #skills .container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
 }
 
 /* Media Queries */
@@ -710,9 +714,13 @@ footer {
   #projects .container,
   #education .container,
   #skills .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
       max-width: calc(var(--container-width) - 4rem);
+  }
+
+  .skills-container {
+    gap: 4rem;
   }
 }
 
@@ -800,8 +808,8 @@ footer {
   #projects .container,
   #education .container,
   #skills .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
       max-width: calc(var(--container-width) - 3rem);
   }
   
@@ -850,5 +858,9 @@ footer {
       padding-left: 1rem;
       padding-right: 1rem;
       max-width: calc(var(--container-width) - 2rem);
+  }
+
+  .skills-container {
+    gap: 2.5rem;
   }
 }
