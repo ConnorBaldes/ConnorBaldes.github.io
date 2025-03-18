@@ -281,10 +281,15 @@ section {
   background-color: var(--light-gray);
 }
 
+#skills .container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: calc(var(--container-width) - 6rem);
+  margin: 0 auto;
+}
+
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  padding: 1rem;
 }
 
 .skill-category h3 {
@@ -700,7 +705,8 @@ footer {
   }
 
   #projects .container,
-  #education .container {
+  #education .container,
+  #skills .container {
       padding-left: 2rem;
       padding-right: 2rem;
       max-width: calc(var(--container-width) - 4rem);
@@ -789,7 +795,8 @@ footer {
   }
 
   #projects .container,
-  #education .container {
+  #education .container,
+  #skills .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       max-width: calc(var(--container-width) - 3rem);
@@ -835,7 +842,8 @@ footer {
   }
 
   #projects .container,
-  #education .container {
+  #education .container,
+  #skills .container {
       padding-left: 1rem;
       padding-right: 1rem;
       max-width: calc(var(--container-width) - 2rem);
