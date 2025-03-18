@@ -507,7 +507,7 @@ section {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .contact-info {
@@ -520,27 +520,27 @@ section {
   width: 100%;
 }
 
+/* Style individual contact items */
 .contact-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   transition: transform 0.3s ease;
-  min-width: 200px;
 }
 
 .contact-item:hover {
   transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .contact-item i {
   font-size: 2rem;
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .contact-item h3 {
@@ -548,26 +548,30 @@ section {
   font-size: 1.2rem;
 }
 
-.contact-item p, .contact-item a {
-  color: var(--text-color);
-  text-decoration: none;
+.contact-item p {
+  margin: 0;
 }
 
 .social-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 0;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.social-links:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--light-gray);
-  transition: all var(--transition-speed);
+  font-size: 2rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
 }
 
 .social-link i {
@@ -576,8 +580,9 @@ section {
 }
 
 .social-link:hover {
-  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
+
 
 .social-link:hover i {
   color: white;
@@ -742,8 +747,7 @@ footer {
     gap: 1rem;
   }
 
-  .contact-item {
-    min-width: 160px;
+  .contact-item, .social-links {
     padding: 1rem;
   }
 }
@@ -777,8 +781,7 @@ footer {
       align-items: center;
   }
   
-  .contact-item {
-      width: 100%;
-      max-width: 300px;
-  }
+  .contact-item, .social-links {
+    width: 80%;
+}
 }
