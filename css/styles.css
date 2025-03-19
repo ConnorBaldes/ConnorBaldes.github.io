@@ -217,7 +217,6 @@ section {
   align-items: center;
   justify-content: space-between;
   width: 100%; /* Ensure it uses full width */
-  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -526,6 +525,10 @@ section {
 }
 
 /* Contact Section */
+#contact {
+  padding: 1rem;
+}
+
 .contact-content {
   display: flex;
   justify-content: center;
